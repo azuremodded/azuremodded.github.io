@@ -1,30 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const referrer = document.referrer;
-    if (!referrer.includes("tinyurl.com")) {
-        document.body.innerHTML = `
-            <div class="container">
-                <h1 class='error'>Access Denied. Please use the proper redirect link.</h1>
-                <button class='link-button' onclick="window.location.href='https://tinyurl.com';">Go To TinyURL</button>
-            </div>
-        `;
-        return;
-    }
-
     const messageDiv = document.getElementById('message');
-    const encryptedText = "bG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9BY3R5cm4vU2NyaXB0cy9tYWluL0F6dXJlTW9kZGVkIikpKCk=";
-    const decodedText = atob(encryptedText);
-
-    messageDiv.innerHTML = `<p>Azure Modded - DaHood Script</p>`;
-    document.getElementById('copyArea').value = decodedText;
-    document.querySelector('.copy-text').style.display = 'block';
-    document.querySelector('.copy-button').style.display = 'block';
+    const copyArea = document.getElementById('copyArea');
+    const copyButton = document.getElementById('copyButton');
+    copyArea.style.display = 'block';
+    copyButton.style.display = 'block';
 });
 
 function copyText() {
-    const encryptedText = "bG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9BY3R5cm4vU2NyaXB0cy9tYWluL0F6dXJlTW9kZGVkIikpKCk=";
-    const decodedText = atob(encryptedText);
     const copyArea = document.getElementById('copyArea');
-    copyArea.value = decodedText;
     copyArea.select();
     document.execCommand('copy');
 }
