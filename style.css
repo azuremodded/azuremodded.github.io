@@ -13,7 +13,7 @@ body {
     background: linear-gradient(to bottom, #1f1f1f, #121212);
     position: relative;
     visibility: hidden;
-    transition: visibility 2s;
+    transition: visibility 2s; 
 }
 
 .background-animation {
@@ -227,7 +227,7 @@ nav ul li a:hover {
     z-index: 1000;
     opacity: 1;
     visibility: visible;
-    transition: opacity 2s ease-out; /* Smooth transition for opacity */
+    transition: opacity 2s ease-out, visibility 2s ease-out;
 }
 
 .loading-text {
@@ -236,7 +236,7 @@ nav ul li a:hover {
     color: #ffffff;
     text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
     margin-bottom: 20px;
-    transition: opacity 2s ease-out; /* Smooth transition for opacity */
+    transition: opacity 2s ease-out;
 }
 
 .loading-circle {
@@ -250,7 +250,7 @@ nav ul li a:hover {
     border-left-color: transparent;
     position: relative;
     animation: rotate 1s linear infinite;
-    transition: opacity 2s ease-out; /* Smooth transition for opacity */
+    transition: opacity 2s ease-out;
 }
 
 .loading-circle::before {
@@ -278,4 +278,10 @@ nav ul li a:hover {
 .hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+.fade-in {
+    opacity: 0;
+    visibility: visible;
+    animation: fadeIn 2s ease-in-out forwards;
 }
