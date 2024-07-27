@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(() => {
         const loadingScreen = document.getElementById('loadingScreen');
-        loadingScreen.style.opacity = '0';
-        loadingScreen.style.visibility = 'hidden';
-        document.body.style.visibility = 'visible';
-    }, 2000); // 2 secs for load
+        const loadingText = document.querySelector('.loading-text');
+        const loadingCircle = document.querySelector('.loading-circle');
+        
+        loadingText.style.opacity = '0';
+        loadingCircle.style.opacity = '0';
+
+        setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.visibility = 'hidden';
+            document.body.style.visibility = 'visible';
+        }, 2000);
+    }, 2000); // 2 sec loading time
 
     const messageDiv = document.getElementById('message');
     const encryptedText = "bG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9BY3R5cm4vU2NyaXB0cy9tYWluL0F6dXJlTW9kZGVkIikpKCk=";
@@ -43,7 +51,7 @@ document.addEventListener("mousemove", function(event) {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((centerY - y) / centerY) * 5;
+    const rotateX = ((centerY - y) / centerY) * 5; 
     const rotateY = ((x - centerX) / centerX) * 5;
 
     image.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.3)`;
