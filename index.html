@@ -7,22 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="https://zkpq.github.io" target="_blank">Home</a></li>
-            <li><a href="https://zkpq.github.io/scripts" target="_blank">Scripts</a></li>
-            <li><a href="https://zkpq.github.io/executors" target="_blank">Executors</a></li>
-        </ul>
-    </nav>
     <div class="background-animation"></div>
     <div class="container" id="container">
-        <div id="message" class="message"></div>
-        <textarea id="copyArea" class="copy-text" readonly></textarea>
+        <div id="message" class="message"><p>Azure Modded - DaHood Script</p></div>
+        <textarea id="copyArea" class="copy-text" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()</textarea>
         <button id="copyButton" class="copy-button" onclick="copyText()">Copy Script</button>
     </div>
     <div class="image-container">
         <img src="azure.png" alt="Azure Image">
     </div>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
