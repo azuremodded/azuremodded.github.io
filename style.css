@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -47,44 +46,6 @@ body {
     opacity: 0.5;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #1f1f1f;
-    padding: 10px 20px;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    transform: scale(1.03);
-}
-
 .container {
     width: 50%;
     max-width: 600px;
@@ -112,10 +73,6 @@ nav ul li a:hover {
     border-radius: 5px;
     text-align: left;
     margin: 20px auto;
-}
-
-.copy-text, .copy-button {
-    display: none;
 }
 
 #copyArea {
