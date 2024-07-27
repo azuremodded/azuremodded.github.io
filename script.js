@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(() => {
         const loadingScreen = document.getElementById('loadingScreen');
-        const loadingText = document.querySelector('.loading-text');
-        const loadingCircle = document.querySelector('.loading-circle');
-        
-        loadingText.style.opacity = '0';
-        loadingCircle.style.opacity = '0';
+        const container = document.getElementById('container');
+
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.visibility = 'hidden';
 
         setTimeout(() => {
-            loadingScreen.style.opacity = '0';
-            loadingScreen.style.visibility = 'hidden';
             document.body.style.visibility = 'visible';
-        }, 2000);
-    }, 2000); // 2 sec loading time
+            container.classList.add('fade-in');
+        }, 1000);
+    }, 1000); // 1 sec loading time
 
     const messageDiv = document.getElementById('message');
     const encryptedText = "bG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9BY3R5cm4vU2NyaXB0cy9tYWluL0F6dXJlTW9kZGVkIikpKCk=";
