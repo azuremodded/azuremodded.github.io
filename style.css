@@ -49,46 +49,6 @@ body {
     opacity: 0.5;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #1f1f1f;
-    padding: 10px 20px;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    transform: scale(1.03);
-}
-
 .container {
     width: 90%;
     max-width: 600px;
@@ -275,46 +235,44 @@ nav ul li a:hover {
     visibility: hidden;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 30px 10px;
-    }
-
-    .message {
-        font-size: 1.2em;
-    }
-
-    #copyArea {
-        width: 100%;
-        height: 60px;
-        font-size: 1.2em;
-    }
-
-    #copyButton {
-        font-size: 1.1em;
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+        height: auto;
         display: block;
-        margin: 10px auto;
+        padding: 20px;
     }
 
-    .image-container {
+    .background-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        text-align: center;
-        margin: 20px auto;
+        height: 100vh;
+        z-index: -2;
+        overflow: hidden;
     }
 
-    .image-container img {
-        max-width: 90%;
-        transform: none;
+    .background-animation::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        opacity: 0.4;
     }
 
-    .loading-text {
-        font-size: 1.2em;
-    }
-
-    .loading-circle {
-        width: 60px;
-        height: 60px;
+    .background-animation::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(circle at center, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+        opacity: 0.5;
     }
 }
 
