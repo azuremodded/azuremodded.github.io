@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(to bottom right, #1a1a1a, #000000);
+    color: #ffffff;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+}
+.nav-bar .logo {
+    position: absolute;
+    left: 320px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    transition: transform 0.3s ease, text-shadow 0.5s ease;
+}
+
+.nav-bar .nav-links {
+    margin-left: 1350px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: text-shadow 0.3s;
+}
+
+.nav-bar .nav-links a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    color: #ffffff;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.link-button {
+    background-color: transparent;
+    margin-bottom: 125px;
+    color: #6200ee;
+    border: 2px solid #6200ee;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    animation: fadeIn 1s;
+}
+
+.link-button:hover {
+    background-color: #6200ee;
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.features-container-wrapper {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.feature-category {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.feature-category h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.feature-category h2 svg {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+    margin-left: 10px;
+}
+
+.feature-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-category ul li {
+    background: #2c2c2c;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    color: #ffffff;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6200ee;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+.scrollable-content {
+    max-height: 60vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #6200ee #2c2c2c;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background-color: #6200ee;
+    border-radius: 4px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background-color: #2c2c2c;
+}
