@@ -30,7 +30,6 @@ Original script credits go to Elegant and Weda
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()`;
 
   navigator.clipboard.writeText(fullScript).then(function() {
-      alert("Script copied to clipboard!");
   }, function(err) {
       alert("Failed to copy text: ", err);
   });
